@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto Web Pinturillo</title>
+        <link rel="stylesheet" href="stylos.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <body>
+        <! -- secion de encabezado y logo -->
+        <header>
+            <div class="logo">
+                <a href="inicio.html">
+                    <img src="logoPintu/logopintu.png" alt="Logo"
+                        class="logo-responsivo">
+                </a>
+            </div>
+        </header>
+        <! -- seccion de ingreso de nickname,elecion de avatares e ingresos a salas -->
+        <main>
+            <div class="container1">
+                <div class="formulario">
+                    <form>
+                        <h3 class="titulo">Crea Mesa</h3>
+                        <div class="campo">
+                            
+                            <input type="text" id="NumMesa"
+                                placeholder="NumMesa">
+
+                        </div>
+                        <button class="btn" type="button" id="btnJugar" data-url="Pinturillo.html"><i class="fas fa-table"></i> Crear</button><!-- Icono de mesas -->
+                        
+                        <h3 class="titulo">Id de Mesa</h3>
+                        <div class="campo">
+                            
+                            <input type="text" id="IdMesa"
+                                placeholder="IdMesa">
+
+                        </div>
+                        <button class="btn" type="button" id="btnJugar" data-url="Pinturillo.html"><i class="fas fa-table"></i>Ingresar a Mesa</button><!-- Icono de jugar -->
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script src="js.js"></script>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2024 - Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </body>
+</html>

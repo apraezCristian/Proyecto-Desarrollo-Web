@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto Web Pinturillo</title>
+        <link rel="stylesheet" href="stylos.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <body>
+        <! -- secion de encabezado y logo -->
+        <header>
+            <div class="logo">
+                <a href="inicio.html">
+                    <img src="logoPintu/logopintu.png" alt="Logo"
+                        class="logo-responsivo">
+                </a>
+            </div>
+        </header>
+
+        <div class="container">
+            <section class="tools-board">
+                
+                <div class="row">
+                    <label class="title">Options</label>
+                    <ul class="options">
+                        <li class="option active tool" id="brush">
+                            <img src="icons/brush.svg" alt>
+                            <span>Brush</span>
+                        </li>
+                        <li class="option tool" id="eraser">
+                            <img src="icons/eraser.svg" alt>
+                            <span>Eraser</span>
+                        </li>
+                        <li class="option">
+                            <input type="range" id="size-slider" min="1"
+                                max="30" value="5">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row colors">
+                    <label class="title">Colors</label>
+                    <ul class="options">
+                        <li class="option"></li>
+                        <li class="option selected"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option">
+                            <input type="color" id="color-picker"
+                                value="#61208f">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row buttons">
+                    <button class="clear-canvas">Eliminar dibujo</button>
+                    
+                </div>
+            </section>
+            <section class="drawing-board">
+                <canvas></canvas>
+            </section>
+        </div>
+        <script src="pintu.js"></script>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2024 - Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </body>
+</html>

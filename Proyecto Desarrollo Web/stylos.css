@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white
+}
+
+/* --------------------------cabezera--------------------------   */
+header {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #61208f;
+    /* Color de fondo del header */
+    padding: 20px;
+
+    ;
+
+}
+
+.logo-responsivo {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    /* Hace que el logo sea tan ancho como su contenedor hasta un máximo de su tamaño original. */
+    height: auto;
+    /* Mantiene la proporción del logo ajustando automáticamente su altura. */
+}
+
+/* container */
+.container1 {
+
+    text-align: center;
+
+}
+
+/* selecion de avatares */
+
+.avatars {
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.avatar.seleccionado {
+    border-color: #61208f;
+}
+
+/*-------------formulario--------------- */
+.formulario {
+    margin-top: 20px;
+    justify-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+    margin-bottom: 20px;
+}
+
+.campo {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.campo i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #61208f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 05px;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+/*---- Juego Pinturillo ----  */
+
+.container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1050px;
+}
+
+section {
+    background: #ffffff;
+    border-radius: 7px;
+    
+}
+
+.tools-board {
+    width: 210px;
+    padding: 15px 22px 0;
+}
+
+.tools-board .row {
+    margin-bottom: 20px;
+}
+
+.row .options {
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option:is(:hover, .active) img {
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option :where(span, label) {
+    color: black;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.option:is(:hover, .active) :where(span, label) {
+    color: #61208f;
+}
+
+.option #fill-color {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+}
+
+#fill-color:checked~label {
+    color: pur;
+}
+
+.option #size-slider {
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colors .options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-top: 3px;
+    position: relative;
+}
+
+.colors .option:nth-child(1) {
+    background-color: #ffffff;
+    border: 1px solid #bfbfbf;
+}
+
+.colors .option:nth-child(2) {
+    background-color: #000;
+}
+
+.colors .option:nth-child(3) {
+    background-color: #E02020;
+}
+
+.colors .option:nth-child(4) {
+    background-color: #6DD400;
+}
+
+.colors .option:nth-child(5) {
+    background-color: #4A98F7;
+}
+
+.colors .option.selected::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child.selected::before {
+    border-color: #ccc;
+}
+
+.option #color-picker {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    font-size: 0.9rem;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons .clear-canvas {
+    color: black;
+    border: 1px solid #61208f;
+    
+    transition: all 0.3s ease;
+}
+
+.clear-canvas:hover {
+    color: #ffffff;
+    background-color: #61208f;
+}
+
+.buttons .save-img {
+    background: #4A98F7;
+    border: 1px solid #4A98F7;
+}
+
+.drawing-board {
+    flex: 1;
+    overflow: hidden;
+}
+
+.drawing-board canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/*----footer----  */
+
+footer {
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    background-color: #61208f;/* Color de fondo del footer */
+    padding: 20px 0;
+    margin-top: auto;
+
+}

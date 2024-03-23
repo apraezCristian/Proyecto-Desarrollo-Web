@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Proyecto Web Pinturillo</title>
+        <link rel="stylesheet" href="stylos.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+    <body>
+        <! -- secion de encabezado y logo -->
+        <header>
+            <div class="logo">
+                <a href="inicio.html">
+                    <img
+                        src="logoPintu/logopintu.png"
+                        alt="Logo"
+                        class="logo-responsivo" />
+                </a>
+            </div>
+        </header>
+        <! -- seccion de ingreso de nickname,elecion de avatares e ingresos a salas -->
+        <main>
+            <div class="container1">
+                <h2>Selecciona tu Avatar</h2>
+                <div id="avatars" class="avatars">
+                    <img src="avatares/avatarMujer.png" alt="Avatar 1"
+                        class="avatar" />
+                    <img src="avatares/avatarNiño.png" alt="Avatar 2"
+                        class="avatar" />
+                </div>
+                <p>Avatar seleccionado: <span
+                        id="avatarSeleccionado">Ninguno</span></p>
+                <div class="formulario">
+                    <form>
+                        <h2 class="titulo">Juego Rápido</h2>
+                        <div class="campo">
+                            <input type="text" id="nickname"
+                                placeholder="Nickname" />
+                        </div>
+                        <button
+                            class="btn"
+                            type="button"
+                            id="btnMesas"
+                            data-url="mesas.html">
+                            <i class="fas fa-table"></i>
+                            Mesas</button><!-- Icono de mesas -->
+                        <button
+                            class="btn"
+                            type="button"
+                            id="btnJugar"
+                            data-url="Pinturillo.html">
+                            <i class="fas fa-play"></i> A
+                            Jugar</button><!-- Icono de jugar -->
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script src="js.js"></script>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2024 - Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </body>
+</html>
